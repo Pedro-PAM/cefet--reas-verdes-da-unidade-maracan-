@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="text-align: justify;">Mapa do Bosque do CEFET-RJ Unidade Maracanã:</p>
+<img src="Planta Baixa do Bosque CEFET-RJ2024 (Versão Atualizada)-1 (2).png" usemap="#mapa">
+<img src="paubrasil.jpg" id="paubrasil" class="arvores" hidden=true>
+<map name="mapa">    
+    <area shape="circle" coords="1356,1362,50" onmouseover="mostrarMapa(paubrasil)" onmouseleave="esconderMapa(paubrasil)">                       
+</map>
+<script>
+    function mostrarMapa(arvore){
+        switch (arvore) {
+            case paubrasil:
+                alert("O Mapa Funciona!");     
+                document.getElementById("paubrasil").hidden = false;                
+                break;        
+            default:                
+                break;
+        }               
+    }
+    function esconderMapa(arvore){
+        switch(arvore){
+            case paubrasil:
+                alert("Escondendo o mapa!");
+                document.getElementById("paubrasil").hidden = true;
+                break;
+            default:
+                break;
+        }
+    }
+</script>
+</body>
+</html>
